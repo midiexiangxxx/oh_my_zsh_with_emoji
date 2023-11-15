@@ -1,5 +1,5 @@
 # oh_my_zsh_with_emoji
-一个有趣的命令提示符主题，预览如下：
+基于oh-my-zsh中ys主题魔改的一个有趣的命令提示符主题，预览如下：
 每次敲击回车时都会随机显示一个不同的emoji
 
 <img src="https://github.com/SVMawww/oh_my_zsh_with_emoji/assets/81839065/479a6e51-f0fa-4075-a6b7-a1fafada18a3" width=755 />
