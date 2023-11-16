@@ -1,6 +1,6 @@
 # oh_my_zsh_with_emoji
 Languages [简体中文](https://github.com/SVMawww/oh_my_zsh_with_emoji/blob/main/README.md#%E4%B8%AD%E6%96%87)/[Endlish](https://github.com/SVMawww/oh_my_zsh_with_emoji/blob/main/README.md#english)
-## 中文
+## 简体中文
 
 基于oh-my-zsh中ys主题魔改的一个有趣的命令提示符主题，预览如下：
 每次敲击回车时都会随机显示一个不同的emoji
