@@ -71,6 +71,7 @@ local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 # % ys @ ys-mbp in ~/.oh-my-zsh on git:master x [21:47:42] C:0
 # $
 precmd() {
+RANDOM=$RANDOM
 emoji=$(echo ${emojis[$RANDOM % ${#emojis[@]}]})
 PROMPT="
 %{$fg[blue]%}$emoji%{$reset_color%} \
