@@ -5,7 +5,8 @@ Languages [简体中文](https://github.com/SVMawww/oh_my_zsh_with_emoji#%E7%AE%
 基于oh-my-zsh中ys主题魔改的一个有趣的命令提示符主题，预览如下：
 每次敲击回车时都会随机显示一个不同的emoji
 
-<img src="https://github.com/SVMawww/oh_my_zsh_with_emoji/assets/81839065/479a6e51-f0fa-4075-a6b7-a1fafada18a3" width=755 />
+![image](https://github.com/user-attachments/assets/3790f419-d920-4f9f-9b64-92c2682d89cb)
+
 
 ### 使用方法：
 - [安装好oh-my-zsh](https://ohmyz.sh/#install)
@@ -21,7 +22,8 @@ Languages [简体中文](https://github.com/SVMawww/oh_my_zsh_with_emoji#%E7%AE%
 
 A fun command prompt theme based on the ys theme in oh-my-zsh, with random emojis shown on each enter keypress, as previewed below:
 
-<img src="https://github.com/SVMawww/oh_my_zsh_with_emoji/assets/81839065/479a6e51-f0fa-4075-a6b7-a1fafada18a3" width=755 />
+![image](https://github.com/user-attachments/assets/f9e94da2-cc22-4654-b7f2-8e4d6c3e2032)
+
 
 ### Usage:
 - [Install oh-my-zsh](https://ohmyz.sh/#install)
