@@ -59,7 +59,17 @@ virtenv_prompt() {
 	echo "${YS_THEME_VIRTUALENV_PROMPT_PREFIX}${VIRTUAL_ENV:t}${YS_THEME_VIRTUALENV_PROMPT_SUFFIX}"
 }
 
-local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
+local exit_code="%(?,,C:%{$fg[yellow]%}%?%{$reset_color%})"
+
+# miniconda
+local conda_prompt='$(conda_prompt_info)'
+conda_prompt_info() {
+    if [ -n "$CONDA_DEFAULT_ENV" ]; then
+        echo -n "%{$terminfo[bold]$fg[yellow]%}($CONDA_DEFAULT_ENV) %{$reset_color%}"
+    else
+        echo -n ''
+    fi
+}
 
 # Prompt format:
 #
@@ -74,15 +84,16 @@ precmd() {
 RANDOM=$RANDOM
 emoji=$(echo ${emojis[$RANDOM % ${#emojis[@]}]})
 PROMPT="
-%{$fg[blue]%}$emoji%{$reset_color%} \
-%(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
+%{$fg[blue]%}${conda_prompt}$emoji%{$reset_color%} \
+%(#,%{$bg[yellow]%}%{$fg[red]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \
 %{$reset_color%} \
-%{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
+%{$terminfo[bold]$fg[green]%}%~%{$reset_color%}\
 ${hg_info}\
 ${git_info}\
 ${svn_info}\
 ${venv_info}\
 \
 [%*] $exit_code
-%{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
+%{$fg_bold[yellow]%}%1{➜%} %{$reset_color%}"
 }
+
