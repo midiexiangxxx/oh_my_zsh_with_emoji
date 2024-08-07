@@ -1,4 +1,7 @@
 # oh_my_zsh_with_emoji
+### Updates:
+- 将$改为->
+- 
 Languages [简体中文](https://github.com/SVMawww/oh_my_zsh_with_emoji#%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/[Endlish](https://github.com/SVMawww/oh_my_zsh_with_emoji#english)
 ## 简体中文
 
