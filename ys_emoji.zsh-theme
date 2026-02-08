@@ -53,23 +53,21 @@ emojis=(😀 😃 😄 😁 😆 😅 😂 🤣 😊 😇 🙂 🙃 😉 😌 �
 # Virtualenv
 local venv_info='$(virtenv_prompt)'
 YS_THEME_VIRTUALENV_PROMPT_PREFIX=" %{$fg[green]%}"
-YS_THEME_VIRTUALENV_PROMPT_SUFFIX=" %{$reset_color%}%"
+YS_THEME_VIRTUALENV_PROMPT_SUFFIX="%{$reset_color%}"
+
 virtenv_prompt() {
-	[[ -n "${VIRTUAL_ENV:-}" ]] || return
-	echo "${YS_THEME_VIRTUALENV_PROMPT_PREFIX}${VIRTUAL_ENV:t}${YS_THEME_VIRTUALENV_PROMPT_SUFFIX}"
-}
-
-local exit_code="%(?,,C:%{$fg[yellow]%}%?%{$reset_color%})"
-
-# miniconda
-local conda_prompt='$(conda_prompt_info)'
-conda_prompt_info() {
-    if [ -n "$CONDA_DEFAULT_ENV" ]; then
-        echo -n "%{$terminfo[bold]$fg[yellow]%}($CONDA_DEFAULT_ENV) %{$reset_color%}"
-    else
-        echo -n ''
+    local venv=""
+    
+    if [[ -n "${VIRTUAL_ENV:-}" ]]; then
+        venv=${VIRTUAL_ENV:t}
+    elif [[ -n "${CONDA_DEFAULT_ENV:-}" ]]; then
+        venv=${CONDA_DEFAULT_ENV}
     fi
+    
+    [[ -n "$venv" ]] || return
+    echo "${YS_THEME_VIRTUALENV_PROMPT_PREFIX}(${venv})${YS_THEME_VIRTUALENV_PROMPT_SUFFIX}"
 }
+local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
 
 # Prompt format:
 #
